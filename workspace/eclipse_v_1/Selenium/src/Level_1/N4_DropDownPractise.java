@@ -18,9 +18,9 @@ public class N4_DropDownPractise {
 
 		// v_driver_obj.findElement(By.xpath("//a[normalize-space()='Images']")).click();
 
-		WebElement v_obj_statci_dropdown = v_driver_obj.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
+		WebElement v_obj_webE_dropdown = v_driver_obj.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
 
-		Select v_obj_dropdown = new Select(v_obj_statci_dropdown);
+		Select v_obj_dropdown = new Select(v_obj_webE_dropdown);
 		v_obj_dropdown.selectByIndex(3);
 		System.out.println(v_obj_dropdown.getFirstSelectedOption().getText());
 		v_obj_dropdown.selectByVisibleText("AED");
@@ -28,7 +28,7 @@ public class N4_DropDownPractise {
 		v_obj_dropdown.selectByValue("INR");
 		System.out.println(v_obj_dropdown.getFirstSelectedOption().getText());
 
-		v_driver_obj.findElement(By.id("divpaxinfo")).click();
+		v_driver_obj.findElement(By.id("divpaxinfo")).click();// number of passengers
 		Thread.sleep(2000L);
 
 		for (int i = 1; i < 5; i++)
@@ -45,7 +45,7 @@ public class N4_DropDownPractise {
 
 
 		Thread.sleep(4000);
-		v_driver_obj.close();// driver.close
+
 		v_driver_obj.quit();// close all child windows
 	}
 
